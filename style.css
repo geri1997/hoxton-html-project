@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+/* General Stuff */
+a{
+    text-decoration: none;
+    color: black;
+}
+img{
+    width: 100%;
+}
+
+/* Header */
+
+header{
+    background-color: #c3c9d5;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 1rem;
+    padding: 0.5rem;
+    align-items: center;
+    align-content: center;
+}
+div.categories a{
+    padding: 1rem;
+}
+div.account{
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* End of Header */
+/* Main */
+main section.banner{
+    text-align: center;
+    display: grid;
+    justify-content: end;
+    align-content: center;
+    height: 600px;
+    color: white;
+    background-image: url(main-banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 90%;
+}
+main section.banner a{
+    color: white;
+}
+main section.banner div{
+    width: 300px;
+    height: 100%;
+    background-color: rgba(216, 191, 216, 0.452);
+    
+}
+/* End of banner */
+/* Rating Section */
+div.ratings{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    gap: 2rem;
+    background-color: #f9f9f9;
+}
+div.ratings p{
+    font-size: 30px;
+    font-weight: 600;
+}
+div.ratings .stars img{
+    width: 20px;
+}
+span.rate-nr{
+    font-size: 40px;
+    font-weight: 900;
+}
+div.all-ratings{
+    text-align: center;
+}
+div.product-nr{
+    display: grid;
+    grid-auto-rows: auto;
+    justify-items: center;
+}
+div.product-nr span:first-child{
+    font-size: 40px;
+    font-weight: 900;
+}
+
+/* End of Rating Section */
+/* Best selling */
+
+section.best-selling{
+    background-color: #fff;
+}
