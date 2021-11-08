@@ -120,4 +120,114 @@ section.best-selling h2{
 }
 .best-selling div.best-products .product{
     border: 2px solid gray;
+    padding: 1rem;
+    display: grid;
+    gap: 0.5rem;
+    height: 400px;
+}
+
+.best-selling div.best-products .product p{
+    font-weight: 900;
+    align-content: center;
+}
+.best-selling div.best-products .product p img{
+    width: 30px;
+}
+
+/* End of Best Selling Products */
+
+/* About us */
+
+section.about-us{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px,1fr));
+}
+.about-us div.about-info{
+    background-color: #1d1b1c;
+    color: white;
+    display: grid;
+    height: 430px;
+    place-content: center;
+    
+}
+.about-us div.about-info div{
+    max-width: 50ch;
+    display: grid;
+    gap: 1rem;
+}
+.about-us div.about-info div h2{
+    font-size: 30px;
+}
+.about-us div.about-img{
+    height: 430px;
+}
+.about-us div.about-img img{
+    height: 100%;
+}
+/* End of Abut us */
+/* For Men/Women */
+section.for{
+    display: grid;
+    margin-top: 1rem;
+    grid-template-columns:repeat(auto-fit, minmax(600px,1fr));
+    
+}
+
+section.for div.men{
+    background-image: url('for-men.jpg');
+    justify-content: center;
+    align-content: flex-end;
+    display: grid;
+    background-position: center;
+    background-size: cover;
+    margin: 2rem;
+    height: 400px;
+}
+section.for div.women{
+    background-image: url(for-women.jpg);
+    justify-content: center;
+    align-content: flex-end;
+    background-position: center;
+    background-size: cover;
+    margin: 2rem;
+    display: grid;
+    height: 400px;
+}
+section.for a{
+    background-color: rgba(15, 13, 8, 0.932);
+    padding: 1rem;
+    border-radius: 10px;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 1rem;
+}
+/* End of for Men/Women */
+/* Occasion */
+section.occasion{
+    background-image: url(every-occasion.jpg);
+    background-position: center;
+    background-size: cover;
+    opacity: 90%;
+    height: 500px;
+    display: grid;
+    place-content: center;
+}
+div.occasion-text{
+    background-color: rgba(245, 245, 245, 0.884);
+    padding: 1rem 2rem;
+    font-size: 25px;
+}
+
+/* End of Occasion */
+/* Footer */
+footer img{
+    width: 30px;
+}
+footer{
+    display: grid;
+    background-color: #1d1b1c;
+    grid-template-columns: auto auto auto;
+    place-content: center;
+    gap: 1rem;
+    padding: 1rem;
 }
