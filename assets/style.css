@@ -18,7 +18,7 @@ img{
 /* Header */
 
 header{
-    background-color: #c3c9d5;
+    background-color: #c3c9d598;
     display: grid;
     grid-auto-flow: column;
     justify-content: space-between;
@@ -26,6 +26,10 @@ header{
     padding: 0.5rem;
     align-items: center;
     align-content: center;
+    position: sticky;
+    z-index: 2;
+    top: 14px;
+    backdrop-filter: blur(10px);
 }
 div.categories a{
     padding: 1rem;
@@ -102,4 +106,18 @@ div.product-nr span:first-child{
 
 section.best-selling{
     background-color: #fff;
+    text-align: center;
+}
+.best-selling div.best-products{
+    display: grid;
+    padding: 2rem;
+    gap: 3rem;
+    justify-content: space-around;
+    grid-template-columns: repeat(auto-fit, minmax(200px ,300px));
+}
+section.best-selling h2{
+    padding: 1rem;
+}
+.best-selling div.best-products .product{
+    border: 2px solid gray;
 }
