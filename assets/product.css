@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+/* General Stuff */
+a{
+    text-decoration: none;
+    color: black;
+}
+img{
+    width: 100%;
+}
+
+/* Header */
+
+header{
+    font-weight: 700;
+    background-color: #c3c9d598;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 1rem;
+    padding: 0.5rem;
+    align-items: center;
+    align-content: center;
+    position: sticky;
+    z-index: 2;
+    top: 14px;
+    backdrop-filter: blur(10px);
+}
+div.categories a{
+    padding: 1rem;
+}
+div.account{
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    gap: 1rem;
+}
+header .categories img{
+    width: 25px;
+    display: none;
+}
+
+/* End of Header */
+/* main */
+main{
+    padding: 1.5rem;
+}
+section.all-info{
+    background-color: #f9f9f9;
+    display: grid;
+    padding: 1rem;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit , minmax(300px, 1fr));
+}
+div.product-info{
+    display: grid;
+    align-content: flex-start;
+    gap: 1rem;
+    /* width: 50ch; */
+    padding: 2rem;
+}
+div.product-info span, div.product-info p:first-of-type{
+    font-weight: 800;
+}
+div.product-info span{
+    justify-self: center;
+}
+div.product-info select{
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    text-align: center;
+    justify-self: center;
+}
+div.product-info .buttons{
+    display: grid;
+    place-content: center;
+    grid-template-columns: auto auto;
+    gap: 2rem;
+}
+div.product-info a{
+    border: 1px solid white;
+    padding: 1rem 0.5rem;
+    color: white;
+    border-radius: 5px;
+    background-color: rgb(53, 48, 48);
+}
+div.product-info a:hover{
+    background-color: black;
+    color: white;
+}
+/* End of Product */
+/* Reviews */
+.reviews{
+    text-align: center;
+    display: grid;
+}
+.reviews img{
+    width: 20px;
+}
+.reviews button{
+    margin: 1rem 0.5rem;
+    padding: 0.5rem 0.5rem;
+}
+.name,.title,.details ,.stars{
+    text-align: left;
+    margin-top: 1rem;
+}
+.name{
+    font-size: 12px;
+}
+.title{
+    font-weight: 700;
+}
+.details{
+    font-size: 15px;
+}
+.single-reviews{
+    border-bottom: 1px solid gray;
+    padding: 2rem;
+}
+
+/* End of Main */
+/* Footer */
+footer img{
+    width: 30px;;
+}
+footer{
+    display: grid;
+    background-color: #1d1b1c;
+    grid-template-columns: auto auto auto;
+    place-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+@media screen and (max-width:600px) {
+    header .categories a:not(a:first-child){
+        display: none;
+    }
+    header .categories img{
+        width: 25px;
+        display: block;
+    }
+}

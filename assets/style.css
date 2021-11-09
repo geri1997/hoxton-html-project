@@ -19,6 +19,7 @@ img{
 
 header{
     background-color: #c3c9d598;
+    font-weight: 700;
     display: grid;
     grid-auto-flow: column;
     justify-content: space-between;
@@ -40,6 +41,10 @@ div.account{
     grid-template-columns: auto auto auto;
     align-items: center;
     gap: 1rem;
+}
+header .categories img{
+    width: 25px;
+    display: none;
 }
 
 /* End of Header */
@@ -230,4 +235,14 @@ footer{
     place-content: center;
     gap: 1rem;
     padding: 1rem;
+}
+
+@media screen and (max-width:600px) {
+    header .categories a:not(a:first-child){
+        display: none;
+    }
+    header .categories img{
+        width: 25px;
+        display: block;
+    }
 }
