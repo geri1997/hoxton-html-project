@@ -35,6 +35,11 @@ header{
 div.categories a{
     padding: 1rem;
 }
+div.categories a:hover:not(a:first-child){
+    background-color: black;
+    color: white;
+    text-decoration: underline;
+}
 div.account{
     padding: 0.5rem;
     display: grid;
@@ -46,6 +51,12 @@ header .categories img{
     width: 25px;
     display: none;
 }
+.logo{
+    font-size: 25px;
+}
+.categories a{
+
+}
 
 /* End of Header */
 /* Main */
@@ -53,7 +64,7 @@ main section.banner{
     text-align: center;
     display: grid;
     justify-content: end;
-    align-content: center;
+    align-content: start;
     height: 600px;
     color: white;
     background-image: url(main-banner.jpg);
@@ -65,11 +76,28 @@ main section.banner{
 main section.banner a{
     color: white;
 }
-main section.banner div{
-    width: 300px;
-    height: 100%;
-    background-color: rgba(216, 191, 216, 0.452);
-    
+main section.banner div.banner-text{
+    width: 309px;
+margin: 1rem;
+display: grid;
+gap: 1rem;
+padding: 1rem;   
+background-color: rgba(0, 0, 0, 0.87);
+    box-shadow: 0 0 2px 2px gray;
+}
+.banner-links{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+.banner-links a{
+    padding: 1rem 1rem;
+    border: 1px solid white;
+    background-color: black;
+}
+.banner-links a:hover{
+    background-color: white;
+    color: black;
+    text-decoration: underline;
 }
 /* End of banner */
 /* Rating Section */
@@ -145,7 +173,7 @@ section.best-selling h2{
 
 section.about-us{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(600px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
 }
 .about-us div.about-info{
     background-color: #1d1b1c;
@@ -174,7 +202,7 @@ section.about-us{
 section.for{
     display: grid;
     margin-top: 1rem;
-    grid-template-columns:repeat(auto-fit, minmax(600px,1fr));
+    grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
     
 }
 
@@ -205,6 +233,14 @@ section.for a{
     color: white;
     font-size: 14px;
     margin-bottom: 1rem;
+    border: 1px solid white;
+
+}
+
+section.for a:hover{
+    background-color: white;
+    color: black;
+    text-decoration: underline;
 }
 /* End of for Men/Women */
 /* Occasion */
@@ -237,7 +273,7 @@ footer{
     padding: 1rem;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:700px) {
     header .categories a:not(a:first-child){
         display: none;
     }

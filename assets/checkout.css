@@ -18,8 +18,8 @@ img{
 /* Header */
 
 header{
-    font-weight: 700;
     background-color: #c3c9d598;
+    font-weight: 700;
     display: grid;
     grid-auto-flow: column;
     justify-content: space-between;
@@ -35,6 +35,11 @@ header{
 div.categories a{
     padding: 1rem;
 }
+div.categories a:hover:not(a:first-child){
+    background-color: black;
+    color: white;
+    text-decoration: underline;
+}
 div.account{
     padding: 0.5rem;
     display: grid;
@@ -45,6 +50,9 @@ div.account{
 header .categories img{
     width: 25px;
     display: none;
+}
+.logo{
+    font-size: 25px;
 }
 
 /* End of Header */
@@ -111,4 +119,15 @@ hr{
 }
 .total span:last-of-type{
     justify-self: end;
+}
+
+
+@media screen and (max-width:700px) {
+    header .categories a:not(a:first-child){
+        display: none;
+    }
+    header .categories img{
+        width: 25px;
+        display: block;
+    }
 }
