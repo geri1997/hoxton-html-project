@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+/* General Stuff */
+a{
+    text-decoration: none;
+    color: black;
+}
+img{
+    width: 100%;
+}
+
+/* Header */
+
+header{
+    font-weight: 700;
+    background-color: #c3c9d598;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 1rem;
+    padding: 0.5rem;
+    align-items: center;
+    align-content: center;
+    position: sticky;
+    z-index: 2;
+    top: 14px;
+    backdrop-filter: blur(10px);
+}
+div.categories a{
+    padding: 1rem;
+}
+div.account{
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    gap: 1rem;
+}
+header .categories img{
+    width: 25px;
+    display: none;
+}
+
+/* End of Header */
+/* main */
+main{
+    margin: 1rem;
+    padding: 1rem;
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+}
+.payment input{
+    margin: 0.5rem 0;
+    padding: 0.5rem 0.5rem;
+}
+.payment select{
+    padding: 0.5rem;
+}
+.payment a{
+    margin-top: 1rem;
+    background-color: white;
+    color: black;
+    box-shadow:  0 0 7px 1px gray;
+    padding: 1rem 0.5rem;
+    transition-duration: 1s;
+}
+.payment .submite{
+    margin-top: 2rem;
+   
+}
+.payment a:hover{
+    background-color: black;
+    color: white;
+}
+div.name{
+    font-weight: 700;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 60px 1fr 60px;
+}
+hr{
+    margin: 1rem 0;
+}
+.subtotal{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 1rem;
+}
+.subtotal span:last-of-type{
+    justify-self: end;
+}
+.shipping{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 1rem;
+}
+.shipping span:last-of-type{
+    justify-self: end;
+}
+.total{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-weight: 800;
+}
+.total span:last-of-type{
+    justify-self: end;
+}
