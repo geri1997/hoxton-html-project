@@ -7,6 +7,9 @@
 
 
 /* General Stuff */
+button{
+    cursor: pointer;
+}
 a{
     text-decoration: none;
     color: black;
@@ -56,7 +59,85 @@ header .categories img{
 }
 /* End of Header */
 
+/* Main */
 
+main{
+    display: grid;
+    height: 86vh;
+    grid-template-columns: 250px 1fr;
+    
+}
+/* End of Main */
+
+/* Filter */
+.filter{
+    overflow-y: scroll;
+}
+.star-ratings img, .products .single-product .stars{
+    width: 25px;
+}
+.filter h2, .filter h3{
+    padding: 1rem 2rem;
+}
+.filter input[type="text"]{
+    width: 60px;
+    margin: 0 0.7rem;
+    border: none;
+    outline: 1px solid gray;
+    border-radius: 10px;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+.filter .price{
+    text-align: center;
+}
+.filter .price h3{
+    text-align: start;
+}
+.filter .price button{
+    margin: 1rem 2rem;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    color: black;
+    font-weight: 700;
+}
+.filter .price button:hover{
+    background-color: black;
+    color: white;
+}
+.band-color{
+  
+    padding-bottom: 2rem;
+}
+.band-color label{
+    padding-left: 2rem;
+}
+.features{
+  
+    padding-bottom: 2rem;
+}
+.features label{
+    padding-left: 2rem;
+}
+.rating .star-ratings{
+    display: grid;
+    padding-left: 2rem;
+}
+.rating .star-ratings a:hover{
+    background-color: rgba(153, 151, 151, 0.726);
+}
+
+/* End of Filter */
+/* Main Products */
+
+#product-image{
+    width: 100%;
+}
+.single-product{
+    width: 200px;
+}
 
 @media screen and (max-width:700px) {
     header .categories a:not(a:first-child){
