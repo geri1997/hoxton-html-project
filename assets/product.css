@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Varela Round', sans-serif;
 }
 
 
@@ -43,7 +45,7 @@ div.categories a:hover:not(#burger){
 div.account{
     padding: 0.5rem;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     align-items: center;
     gap: 1rem;
 }
@@ -58,8 +60,17 @@ header .categories img{
     padding-left: 1rem;
     font-size: 25px;
 }
+.logo a{
+    font-family: 'Architects Daughter', cursive;
+
+}
 .categories{
     position: relative;
+}
+
+img#contact{
+    width: 25px;
+    display: none;
 }
 /* End of Header */
 /* main */
@@ -196,4 +207,12 @@ footer{
         background-color: black;
     }
 
+}
+@media screen and (max-width:450px) {
+    img#contact{
+        display: block;
+    }
+    header div.account a:first-child{
+        display: none;
+    }
 }
