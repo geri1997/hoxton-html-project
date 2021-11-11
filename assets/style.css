@@ -5,6 +5,54 @@
     font-family: sans-serif;
 }
 
+/* Test overlay */
+#over{
+    visibility: hidden;
+    position: fixed;
+    top: 200px;
+    left: 65%;
+    z-index: 10;
+    animation: check 1s 2s forwards;
+}
+@keyframes check {
+    100%{visibility: visible;}
+}
+#over:checked + .box,#over:checked ~ .background{
+    display: none;
+}
+#over:checked{
+    display: none;
+}
+.box{
+    width: 30%;
+    height: 400px;
+    position: fixed;
+    top: 200px;
+    background-color: rgba(76, 0, 130, 0);
+    z-index: -5;
+    left: 35%;
+    animation: overlay 1s 2s 1 forwards linear;
+}
+.background{
+
+    background-color: rgba(0, 0, 0, 0);
+    width: 100vw;
+    top: 0px;
+    left: 0px;
+    animation: background1 1s 2s 1 forwards linear;
+    position: fixed;
+    height: 100vh;
+}
+@keyframes background1 {
+    100%{z-index: 5; background-color: rgba(0, 0, 0, 0.452);}
+}
+@keyframes overlay {
+    100%{z-index: 6; background-color: indigo;}
+}
+
+
+
+
 
 /* General Stuff */
 a{
