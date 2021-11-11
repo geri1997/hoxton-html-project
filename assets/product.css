@@ -35,7 +35,7 @@ header{
 div.categories a{
     padding: 1rem;
 }
-div.categories a:hover:not(a:first-child){
+div.categories a:hover:not(#burger){
     background-color: black;
     color: white;
     text-decoration: underline;
@@ -47,13 +47,19 @@ div.account{
     align-items: center;
     gap: 1rem;
 }
-header .categories img{
+header .categories #burger{
     width: 25px;
     display: none;
 }
+header .categories img{
+    width: 25px;
+}
 .logo{
-    font-size: 25px;
     padding-left: 1rem;
+    font-size: 25px;
+}
+.categories{
+    position: relative;
 }
 /* End of Header */
 /* main */
@@ -150,12 +156,44 @@ footer{
 }
 
 @media screen and (max-width:700px) {
-    header .categories a:not(a:first-child){
-        display: none;
+    header .categories a:not(#burger){
+        /* display: none; */
+        font-size: 0px;
+
     }
-    header .categories img{
+    header .categories #burger{
         width: 25px;
         display: block;
+        padding-left: 0rem;
+    }
+    header .categories .links-category{
+        height: 0px;
+        width: 0px;
+    }
+    div.categories a{
+        padding: 0;
+    }
+    header .categories #burger:focus + .links-category{
+        display: grid;
+        position: absolute;
+        left: -0.45rem;
+        top: 3rem;
+        transition-duration: 1s;
+        width: 100px;
+        height: 100px;
+        background-color: white;
+    }
+    header .categories #burger:focus + .links-category a{
+        display: block;
+        transition-duration: 1s;
+        font-size: initial;
+        padding: 1rem;
+        outline: 1px solid #e5e5e5;
+        background-color: #c3c9d598;
+    }
+    header .categories #burger:focus + .links-category a:hover{
+
+        background-color: black;
     }
 
 }
