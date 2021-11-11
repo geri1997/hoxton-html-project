@@ -5,33 +5,47 @@
     font-family: sans-serif;
 }
 
+
 /* Test overlay */
+
 #over{
     visibility: hidden;
     position: fixed;
     top: 200px;
-    left: 65%;
+    left: 70%;
     z-index: 10;
-    animation: check 1s 2s forwards;
+    animation: check 1s 30s forwards;
 }
 @keyframes check {
     100%{visibility: visible;}
 }
-#over:checked + .box,#over:checked ~ .background{
+#over:checked + .box,#over:checked ~ label{
     display: none;
 }
 #over:checked{
     display: none;
 }
+/* .overlay{
+    display: grid;
+    position: relative;
+    place-items: center;
+    height: 0px;
+    animation: overlay1 1s 30s forwards;
+}
+@keyframes overlay1 {
+    100%{height: 250px;}
+} */
 .box{
-    width: 30%;
-    height: 400px;
+    width: 40%;
+    
+    height: 200px;
     position: fixed;
     top: 200px;
     background-color: rgba(76, 0, 130, 0);
     z-index: -5;
-    left: 35%;
-    animation: overlay 1s 2s 1 forwards linear;
+    visibility: hidden;
+    left: 30%;
+    animation: overlay 1s 30s 1 forwards linear;
 }
 .background{
 
@@ -39,15 +53,17 @@
     width: 100vw;
     top: 0px;
     left: 0px;
-    animation: background1 1s 2s 1 forwards linear;
+    z-index: -1;
+    animation: background1 1s 30s 1 forwards linear;
     position: fixed;
     height: 100vh;
+    
 }
 @keyframes background1 {
-    100%{z-index: 5; background-color: rgba(0, 0, 0, 0.452);}
+    100%{z-index: 5;backdrop-filter: blur(10px); background-color: rgba(0, 0, 0, 0.452);}
 }
 @keyframes overlay {
-    100%{z-index: 6; background-color: indigo;}
+    100%{z-index: 6;visibility: visible; background-color: indigo;}
 }
 
 
@@ -55,6 +71,9 @@
 
 
 /* General Stuff */
+body::-webkit-scrollbar{
+    width: 0px;
+}
 a{
     text-decoration: none;
     color: black;
@@ -112,6 +131,9 @@ header .categories img{
 
 /* End of Header */
 /* Main */
+
+
+
 main section.banner{
     text-align: center;
     display: grid;
@@ -140,6 +162,9 @@ background-color: rgba(0, 0, 0, 0.87);
 .banner-links{
     margin-top: 3rem;
     margin-bottom: 2rem;
+}
+.banner-text p {
+    line-height: 1.5rem;
 }
 .banner-links a{
     padding: 1rem 1rem;
@@ -188,6 +213,30 @@ div.product-nr span:first-child{
 
 /* End of Rating Section */
 /* Best selling */
+input[type="radio"]{
+    display: none;
+}
+.best-selling label{
+    cursor: pointer;
+    padding: 1rem;
+    display: inline-block;
+    font-weight: 800;
+    border: 1px solid grey;
+    margin: 1rem;
+}
+.best-selling label:hover{
+    box-shadow: 0 0 10px 2px grey;
+}
+.best-selling #men:checked ~ label[for="men"]{
+    background-color: black;
+    color: white;
+    text-decoration: underline;
+}
+.best-selling #women:checked ~ label[for="women"]{
+    background-color: black;
+    color: white;
+    text-decoration: underline;
+}
 
 section.best-selling{
     background-color: #fff;
@@ -200,6 +249,15 @@ section.best-selling{
     justify-content: space-around;
     grid-template-columns: repeat(auto-fit, minmax(200px ,300px));
 }
+.best-selling div.women{
+    display: none;
+}
+.best-selling #women:checked ~ div.women{
+    display: grid;
+}
+.best-selling #women:checked ~ div.men{
+    display: none;
+}
 section.best-selling h2{
     padding: 1rem;
 }
@@ -209,9 +267,15 @@ section.best-selling h2{
     display: grid;
     gap: 0.5rem;
     height: 400px;
+    border-radius: 30px;
+
 }
-.best-products a:hover{
-    box-shadow: 0 0 10px 3px grey;
+.best-products a{
+    transition-duration: 0.5s;
+    
+}
+.best-products a .product:hover{
+    box-shadow: 0 0 10px 5px grey;
 }
 
 .best-selling div.best-products .product p{
@@ -327,6 +391,7 @@ footer{
     gap: 1rem;
     padding: 1rem;
 }
+
 
 @media screen and (max-width:700px) {
     header .categories a:not(#burger){

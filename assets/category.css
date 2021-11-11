@@ -214,11 +214,13 @@ div.stars{
 }
 .single-product a:hover{
     box-shadow: 0 0 10px 3px grey;
+     
 }
 
 .single-product a{
     display: grid;
     gap: 1rem;
+    transition-duration: 0.5s;
     border: 2px solid #e5e5e5;
     border-radius: 30px;
     padding: 1rem;
