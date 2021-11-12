@@ -19,7 +19,7 @@ label.close-button{
     top: 195px;
     left: 68%;
     z-index: 10;
-    animation: check 1s 30s forwards;
+    animation: check 1s 50s forwards;
 }
 #over:checked~label.close-button{
     display: none;
@@ -71,7 +71,7 @@ button[type="submit"]{
     visibility: hidden;
     gap: 1rem;
     left: 30%;
-    animation: overlay 1s 30s 1 forwards linear;
+    animation: overlay 1s 50s 1 forwards linear;
 }
 .background{
 
@@ -80,7 +80,7 @@ button[type="submit"]{
     top: 0px;
     left: 0px;
     z-index: -1;
-    animation: background1 1s 30s 1 forwards linear;
+    animation: background1 1s 50s 1 forwards linear;
     position: fixed;
     height: 100vh;
     
