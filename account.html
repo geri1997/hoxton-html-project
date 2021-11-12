@@ -5,12 +5,176 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
+}
+
+
+/* General Stuff */
+a{
+    text-decoration: none;
+    color: black;
+}
+img{
+    width: 100%;
+}
+
+/* Header */
+
+header{
+    background-color: #c3c9d598;
+    font-weight: 700;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 1rem;
+    padding: 0.5rem;
+    align-items: center;
+    align-content: center;
+    position: sticky;
+    z-index: 2;
+    top: 14px;
+    backdrop-filter: blur(10px);
+}
+div.categories a{
+    padding: 1rem;
+}
+div.categories a:hover:not(#burger){
+    background-color: black;
+    color: white;
+    text-decoration: underline;
+}
+div.account{
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    align-items: center;
+    gap: 1rem;
+}
+header .categories #burger{
+    width: 25px;
+    display: none;
+}
+header .categories img{
+    width: 25px;
+}
+.logo{
+    padding-left: 1rem;
+    font-size: 25px;
+}
+.logo a{
+    font-family: 'Architects Daughter', cursive;
+
+}
+.categories{
+    position: relative;
+}
+
+img#contact{
+    width: 25px;
+    display: none;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+    gap: 3rem;
+}
+main input[type="text"], main input[type="password"], main input[type="email"]{
+    width: 200px;
+    padding: 0.5rem 1rem;
+}
+button{
+    width: 120px;
+    padding: 0.6rem 0;
+}
+.log-in,.sign-up{
+    display: grid;
+    gap: 1rem;
+}
+.log-in{
+    align-content: flex-start;
+}
+@media screen and (max-width:700px) {
+    header .categories a:not(#burger){
+        /* display: none; */
+        font-size: 0px;
+
+    }
+    header .categories #burger{
+        width: 25px;
+        display: block;
+        padding-left: 0rem;
+    }
+    header .categories .links-category{
+        height: 0px;
+        width: 0px;
+    }
+    div.categories a{
+        padding: 0;
+    }
+    header .categories #burger:focus + .links-category{
+        display: grid;
+        position: absolute;
+        left: -0.45rem;
+        top: 3rem;
+        transition-duration: 1s;
+        width: 100px;
+        height: 100px;
+        background-color: white;
+    }
+    header .categories #burger:focus + .links-category a{
+        display: block;
+        transition-duration: 1s;
+        font-size: initial;
+        padding: 1rem;
+        outline: 1px solid #e5e5e5;
+        background-color: #c3c9d598;
+    }
+    header .categories #burger:focus + .links-category a:hover{
+
+        background-color: black;
+    }
+
+}
+@media screen and (max-width:530px) {
+    img#contact{
+        display: block;
+    }
+    header div.account a:first-child{
+        display: none;
+    }
+}
+    </style>
 </head>
 <body>
-    
+    <header>
+        <div class="categories">
+            <a href="#" id="burger"><img src="https://static.thenounproject.com/png/3187934-200.png" alt=""></a>
+
+            <div class="links-category">
+                <a href="./men.html">MEN</a>
+                <a href="./women.html">WOMEN</a>
+            </div>
+        </div>
+        <div class="logo"><a href="index.html">LUXURY WATCHES</a></div>
+        <div class="account">
+            <a href="./contact.html">CONTACT</a>
+            <a href="./contact.html"><img id="contact" src="https://www.iconpacks.net/icons/1/free-mail-icon-142-thumb.png" alt=""></a>
+            <a href="./account.html"><img src="assets\user.svg" alt=""></a>
+            <a href="./cart.html"><svg width="34" height="31" viewBox="0 0 34 31" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="jsx-3407473002"><defs class="jsx-3407473002"><polygon id="path-1" points="0 0.3672 33.089 0.3672 33.089 21.3842 0 21.3842" class="jsx-3407473002"></polygon></defs><g id="Page-1" fill="none" fill-rule="evenodd" class="jsx-3407473002"><g id="Cart-Empty" class="jsx-3407473002"><g id="Page-1" transform="translate(0 1)" class="jsx-3407473002"><g id="Group-3" transform="translate(0 .633)" class="jsx-3407473002"><mask id="mask-2" fill="#fff" class="jsx-3407473002"><use xlink:href="#path-1" class="jsx-3407473002"></use></mask><path d="M8.4296,4.5812 L11.5266,20.1472 L28.3366,19.1582 L31.7276,4.4012 L20.0506,4.4012 L8.4296,4.5812 Z M11.0356,21.3842 C10.7506,21.3842 10.5006,21.1822 10.4446,20.8982 L7.1386,4.2782 L4.5696,1.5742 L0.6036,1.5742 C0.2706,1.5742 -0.0004,1.3042 -0.0004,0.9712 C-0.0004,0.6372 0.2706,0.3672 0.6036,0.3672 L4.8286,0.3672 C4.9946,0.3672 5.1526,0.4352 5.2666,0.5552 L7.9516,3.3812 L20.0416,3.1942 L32.4856,3.1942 C32.6696,3.1942 32.8436,3.2782 32.9576,3.4222 C33.0726,3.5662 33.1156,3.7542 33.0736,3.9332 L29.4116,19.8692 C29.3516,20.1302 29.1266,20.3212 28.8596,20.3362 L11.0726,21.3832 C11.0606,21.3842 11.0486,21.3842 11.0356,21.3842 Z" id="Fill-1" fill="#231F20" mask="url(#mask-2)" class="jsx-3407473002"></path></g><path d="M29.4276,24.4718 L11.1166,24.4718 C10.7836,24.4718 10.5126,24.2008 10.5126,23.8678 L10.5126,21.4128 C10.5126,21.0798 10.7836,20.8098 11.1166,20.8098 C11.4496,20.8098 11.7206,21.0798 11.7206,21.4128 L11.7206,23.2638 L29.4276,23.2638 C29.7606,23.2638 30.0316,23.5348 30.0316,23.8678 C30.0316,24.2008 29.7606,24.4718 29.4276,24.4718" id="Fill-4" fill="#231F20" class="jsx-3407473002"></path><path d="M14.4169,27.2785 C14.4169,28.5785 13.3629,29.6325 12.0629,29.6325 C10.7629,29.6325 9.7089,28.5785 9.7089,27.2785 C9.7089,25.9785 10.7629,24.9245 12.0629,24.9245 C13.3629,24.9245 14.4169,25.9785 14.4169,27.2785" id="Fill-6" fill="#231F20" class="jsx-3407473002"></path><path d="M30.2723,27.2785 C30.2723,28.5785 29.2183,29.6325 27.9183,29.6325 C26.6183,29.6325 25.5643,28.5785 25.5643,27.2785 C25.5643,25.9785 26.6183,24.9245 27.9183,24.9245 C29.2183,24.9245 30.2723,25.9785 30.2723,27.2785" id="Fill-8" fill="#231F20" class="jsx-3407473002"></path></g></g></g></svg></a>
+        </div>
+    </header>
 
     <main>
-        <div class="container">
+        <div class="log-in">
+            <h1>Log in</h1>
             <label for="uname"><b>Username</b></label>
             <input type="text" placeholder="Enter Username" name="uname" required>
       
@@ -21,6 +185,22 @@
             <label>
               <input type="checkbox" checked="checked" name="remember"> Remember me
             </label>
+          </div>
+          <div class="sign-up">
+              <h1>Sign up</h1>
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+            <label for=""><b> Email Address</b></label>
+            <input type="email" name="" id="">
+            <label for=""><b> Re-type email address</b></label>
+            <input type="email" name="" id="">
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <label for="psw"><b>Re-type Password</b></label>
+            <input type="password" placeholder="Re-Enter Password"  required>
+             
+            <button type="submit">Sign up</button>
+            
           </div>
     </main>
 </body>
