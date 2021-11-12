@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Shopping Cart</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
@@ -13,49 +13,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Varela Round', sans-serif;
-}        input[type=text], select, textarea {
-            width: 50%; 
-            padding: 12px; 
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            margin-top: 6px;
-            margin-bottom: 16px;
-            resize: vertical;
-        }
-        input[type=email]{
-            width: 50%; 
-            padding: 12px; 
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            margin-top: 6px;
-            margin-bottom: 16px;
-            resize: vertical;
-        }
-        input[type=submit] {
-            background-color: #04AA6D;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            display: block;
-        }
-
-
-        .container {
-            border-radius: 5px;
-            background-color: #f2f2f2;
-            padding: 20px;
-        }
-        textarea#subject{
-            padding-left: 20px;
-        }
-        label#subject{
-            display: block;
-        }
-
+}
+body::-webkit-scrollbar{
+    width: 0px;
+}
 a{
     text-decoration: none;
     color: black;
@@ -63,9 +24,8 @@ a{
 img{
     width: 100%;
 }
-main{
-    margin: 3rem;
-}
+
+/* Header */
 
 header{
     background-color: #c3c9d598;
@@ -120,7 +80,33 @@ img#contact{
     width: 25px;
     display: none;
 }
+main{
+    padding: 2rem;
+}
+h1{
+    margin-bottom: 1.5rem;
+}
 
+.single-item{
+    display: grid;
+    margin-bottom: 2rem;
+    grid-template-columns: 150px auto;
+    margin-top: 2rem;
+}
+.info{
+    max-width: fit-content;
+    /* gap: 5rem; */
+
+    display: grid;
+    grid-template-columns: auto 100px 100px;
+}
+.price,.quantity{
+    justify-self: end;
+}
+.info span, .date{
+    color: gray;
+    font-size: 0.8rem;
+}
 
 footer img{
     width: 30px;
@@ -133,12 +119,29 @@ footer{
     gap: 1rem;
     padding: 1rem;
 }
-.logo a{
-    font-family: 'Architects Daughter', cursive;
-
+.price{
+    font-weight: 700;
 }
-
-
+.links a{
+    outline: 1px solid gray;
+    border-radius: 30px;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+}
+.links a:first-child:hover{
+    background-color: rgba(0, 128, 0, 0.575);
+}
+.links a:last-child:hover{
+    background-color: rgba(255, 0, 0, 0.575);
+}
+.links{
+    display: inline-block;
+}
+.links a.details:hover{
+    background-color: black;
+    color: white;
+    text-decoration: underline;
+}
 @media screen and (max-width:700px) {
     header .categories a:not(#burger){
         /* display: none; */
@@ -153,6 +156,7 @@ footer{
     header .categories .links-category{
         height: 0px;
         width: 0px;
+
     }
     div.categories a{
         padding: 0;
@@ -176,16 +180,26 @@ footer{
         background-color: #c3c9d598;
     }
     header .categories #burger:focus + .links-category a:hover{
+
         background-color: black;
-    }}@media screen and (max-width:530px) {
+    }
+   
+}
+@media screen and (max-width:530px) {
     img#contact{
         display: block;
     }
     header div.account a:first-child{
         display: none;
     }
+    .info{
+        grid-template-columns: auto;
+        gap: 1rem;
+    }
+    .price, .quantity{
+        justify-self: start;
+    }
 }
-
     </style>
 </head>
 <body>
@@ -205,35 +219,125 @@ footer{
             <a href="./account.html"><img src="assets\user.svg" alt=""></a>
             <a href="./cart.html"><svg width="34" height="31" viewBox="0 0 34 31" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="jsx-3407473002"><defs class="jsx-3407473002"><polygon id="path-1" points="0 0.3672 33.089 0.3672 33.089 21.3842 0 21.3842" class="jsx-3407473002"></polygon></defs><g id="Page-1" fill="none" fill-rule="evenodd" class="jsx-3407473002"><g id="Cart-Empty" class="jsx-3407473002"><g id="Page-1" transform="translate(0 1)" class="jsx-3407473002"><g id="Group-3" transform="translate(0 .633)" class="jsx-3407473002"><mask id="mask-2" fill="#fff" class="jsx-3407473002"><use xlink:href="#path-1" class="jsx-3407473002"></use></mask><path d="M8.4296,4.5812 L11.5266,20.1472 L28.3366,19.1582 L31.7276,4.4012 L20.0506,4.4012 L8.4296,4.5812 Z M11.0356,21.3842 C10.7506,21.3842 10.5006,21.1822 10.4446,20.8982 L7.1386,4.2782 L4.5696,1.5742 L0.6036,1.5742 C0.2706,1.5742 -0.0004,1.3042 -0.0004,0.9712 C-0.0004,0.6372 0.2706,0.3672 0.6036,0.3672 L4.8286,0.3672 C4.9946,0.3672 5.1526,0.4352 5.2666,0.5552 L7.9516,3.3812 L20.0416,3.1942 L32.4856,3.1942 C32.6696,3.1942 32.8436,3.2782 32.9576,3.4222 C33.0726,3.5662 33.1156,3.7542 33.0736,3.9332 L29.4116,19.8692 C29.3516,20.1302 29.1266,20.3212 28.8596,20.3362 L11.0726,21.3832 C11.0606,21.3842 11.0486,21.3842 11.0356,21.3842 Z" id="Fill-1" fill="#231F20" mask="url(#mask-2)" class="jsx-3407473002"></path></g><path d="M29.4276,24.4718 L11.1166,24.4718 C10.7836,24.4718 10.5126,24.2008 10.5126,23.8678 L10.5126,21.4128 C10.5126,21.0798 10.7836,20.8098 11.1166,20.8098 C11.4496,20.8098 11.7206,21.0798 11.7206,21.4128 L11.7206,23.2638 L29.4276,23.2638 C29.7606,23.2638 30.0316,23.5348 30.0316,23.8678 C30.0316,24.2008 29.7606,24.4718 29.4276,24.4718" id="Fill-4" fill="#231F20" class="jsx-3407473002"></path><path d="M14.4169,27.2785 C14.4169,28.5785 13.3629,29.6325 12.0629,29.6325 C10.7629,29.6325 9.7089,28.5785 9.7089,27.2785 C9.7089,25.9785 10.7629,24.9245 12.0629,24.9245 C13.3629,24.9245 14.4169,25.9785 14.4169,27.2785" id="Fill-6" fill="#231F20" class="jsx-3407473002"></path><path d="M30.2723,27.2785 C30.2723,28.5785 29.2183,29.6325 27.9183,29.6325 C26.6183,29.6325 25.5643,28.5785 25.5643,27.2785 C25.5643,25.9785 26.6183,24.9245 27.9183,24.9245 C29.2183,24.9245 30.2723,25.9785 30.2723,27.2785" id="Fill-8" fill="#231F20" class="jsx-3407473002"></path></g></g></g></svg></a>
         </div>
+        
     </header>
     <main>
-        <h1>Contact Us</h1>
-        <br><br>
-        <div class="container">
-            <form >
-          
-              <label for="fname">First Name</label>
-              <input type="text" id="fname" name="firstname" placeholder="Your name.."><br>
-          
-              <label for="lname">Last Name</label>
-              <input type="text" id="lname" name="lastname" placeholder="Your last name.."><br>
-                <label for="email">Email Address</label>
-                <input type="email" name="" id="">
-                <br>
-              <label for="country">Country</label>
-              <select id="country" name="country">
-                <option value="albania">Albania</option>
-                <option value="uk">UK</option>
-              </select><br>
-          
-              <label id="subject" for="subject">Subject</label>
-              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-          
-              <input type="submit" value="Submit">
-          
-            </form>
-          </div>
+        <h1>Your cart: 2 items</h1>
+        <div class="single-item">
+            <img src="assets\rolex-cellini.jpg" alt="">
+            <div class="info">
+                <div class="name">
+                <p>Rolex Cellini 50529 Black Dial Leather Strap Dual Time 39mm Mens Watch</p>
+                <span>Band color: Black</span>
+                <p class="date">Date: 11/06/2021</p>
+            </div>
+            <div class="quantity">
+                <span>Qty</span>
+                <select name="" id="">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                    <option value="">6</option>
+
+                </select>
+            </div>
+            <div class="price">$2500</div>
+            <div class="links">
+                <a href="checkout.html">Buy Now</a>
+                <a href="#">Remove</a>
+            </div>
+        </div>
+        
+        </div>
+        <hr>
+        <div class="single-item">
+            <img src="assets\bvlgari.jpg" alt="">
+            <div class="info">
+                <div class="name">
+                <p>Bvlgari Octo</p>
+                <span>Band color: Brown</span>
+                <p class="date">Date: 11/06/2021</p>
+            </div>
+            <div class="quantity">
+                <span>Qty</span>
+                <select name="" id="">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                    <option value="">6</option>
+
+                </select>
+            </div>
+            <div class="price">$5000</div>
+            <div class="links">
+                <a href="checkout.html">Buy Now</a>
+                <a href="#">Remove</a>
+            </div>
+        </div>
+        
+        </div>
+        <h2>Past Orders</h2>
+        <div class="single-item">
+            <img src="assets\datejust.jpg" alt="">
+            <div class="info">
+                <div class="name">
+                <p>Rolex Datejust 68273</p>
+                <span>Band color: Silver</span>
+            </div>
+            <div class="quantity">
+                <span>Qty</span>
+                <select name="" id="">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                    <option value="">6</option>
+
+                </select>
+            </div>
+            <div class="price">$7300</div>
+            <div class="links">
+                
+                <a href="#" class="details">Details</a>
+            </div>
+        </div>
+        
+        </div><div class="single-item">
+            <img src="assets\glashutte1.jpg" alt="">
+            <div class="info">
+                <div class="name">
+                <p>Glashutte Seventies</p>
+                <span>Band color: Black</span>
+            </div>
+            <div class="quantity">
+                <span>Qty</span>
+                <select name="" id="">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                    <option value="">6</option>
+
+                </select>
+            </div>
+            <div class="price">$4700</div>
+            <div class="links">
+                <a href="#" class="details">Details</a>
+            </div>
+        </div>
+        
+        </div>
     </main>
-    
+    <footer>
+        <a href="#"><img src="https://www.freepnglogos.com/uploads/facebook-logo-icon/facebook-logo-clipart-flat-facebook-logo-png-icon-circle-22.png" alt=""></a>
+        <a href="#"><img src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c521.png" alt=""></a>   
+         <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png" alt=""></a>
+    </footer>
 </body>
 </html>

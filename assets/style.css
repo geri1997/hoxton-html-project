@@ -9,7 +9,7 @@
 
 /* Test overlay */
 label.close-button{
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.7rem;
     cursor: pointer;
     border-radius: 50%;
     visibility: hidden;
@@ -442,6 +442,7 @@ footer{
     header .categories .links-category{
         height: 0px;
         width: 0px;
+
     }
     div.categories a{
         padding: 0;
@@ -472,7 +473,7 @@ footer{
         font-size: 20px;
     }
 }
-@media screen and (max-width:450px) {
+@media screen and (max-width:530px) {
     img#contact{
         display: block;
     }

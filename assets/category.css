@@ -307,7 +307,7 @@ div.stars{
     }
 }
 
-@media screen and (max-width:450px) {
+@media screen and (max-width:530px) {
     img#contact{
         display: block;
     }
